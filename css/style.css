@@ -1,0 +1,249 @@
+/*---------------------------------------------------------*/
+:root {
+    --green: #349334;
+    --dark-green: #225b22;
+    --light-green: #c3e7aa;
+    --cream: #f5f7f2;
+    --dark: #222222;
+    --white: #ffffff;
+    --yellow: #d1df0c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--cream);
+}
+
+
+
+/*---------------------------------------------------------*/
+/*sections that divide in quadrants*/
+section {
+    padding: 80px 20px;
+}
+section > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+/*---------------------------------------------------------*/
+/*headings*/
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin: 0 0 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 0 0 40px;
+    color: black;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: black;
+} 
+
+
+/*---------------------------------------------------------*/
+/*header at the top*/
+header {
+    display: flex; /*turns element into a flexbox container*/
+    justify-content: space-between; /*center, flex-start, flex-end, space-around, space-evenly*/
+    align-items: center;
+
+    padding: 15px 40px;
+
+    background-color:black;
+
+}
+nav {
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: bold;
+}
+nav a:hover {
+    color: var(--dark);
+}
+.logo img {
+    width:180px;
+    height: auto;
+}
+
+/*---------------------------------------------------------*/
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--green);
+
+    border-bottom: 1px solid var(--dark);
+}
+.hero p {
+    max-width: 600 px;
+
+    margin: 0 auto 30px;
+
+    font-size: 1.2rem;
+}
+.hero-logo {
+    width: min(600px, 90%);
+    height: auto;
+}
+.button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: var(--yellow);
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: backgroud-color 0.2s ease,
+                transform 0.2s ease;
+}
+.button:hover {
+    background-color: var(--light-green);
+    transform: translateY(-2px);
+}
+
+
+/*---------------------------------------------------------*/
+/*services grid*/
+.services {
+    background-color: var(--cream);
+}
+.services ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25 px;
+
+    list-style: none;
+
+    padding: 0;
+    margin:0;
+}
+.services li {
+    background-color: var(--light-green);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.services li:hover {
+    transform: translateY(-20px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.services li h3 {
+    margin-top: 0;
+    color: black;
+}
+
+.services li p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+
+
+/*---------------------------------------------------------*/
+/* about */
+.about {
+    background-color: var(--white);
+}
+.about p {
+    max-width: 750 px;
+}
+
+
+
+/* Service Area ***DO NOT GET CONFUSED WITH SERVICE*** */
+.service-area {
+    background-color: var(--cream);
+}
+.map img {
+    width: 500px;
+    height: auto;
+}
+
+
+/*---------------------------------------------------------*/
+/* quote */
+.quote {
+    text-align: center;
+    background-color: var(--green);
+}
+.logo img {
+    width:180px;
+    height: auto;
+}
+
+
+
+/*---------------------------------------------------------*/
+/* Mobile Settings */
+@media (max-width: 768px) {
+    .services ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15 px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services ul {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
