@@ -85,7 +85,7 @@ nav a {
     font-weight: bold;
 }
 nav a:hover {
-    color: var(--dark);
+    color: var(--yellow);
 }
 .logo img {
     width:180px;
