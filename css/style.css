@@ -181,6 +181,7 @@ nav a:hover {
 /*---------------------------------------------------------*/
 /* about */
 .about {
+    text-align: center;
     background-color: var(--white);
 }
 .about p {
@@ -191,6 +192,7 @@ nav a:hover {
 
 /* Service Area ***DO NOT GET CONFUSED WITH SERVICE*** */
 .service-area {
+    text-align: center;
     background-color: var(--cream);
 }
 .map img {
