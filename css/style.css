@@ -75,16 +75,16 @@ header {
     background-color:black;
 
 }
-nav {
+.navigation {
     display: flex;
     gap: 25px;
 }
-nav a {
+.navigation a {
     text-decoration: none;
     color: var(--green);
     font-weight: bold;
 }
-nav a:hover {
+.navigation a:hover {
     color: var(--yellow);
 }
 .logo img {
@@ -140,6 +140,7 @@ nav a:hover {
 /*services grid*/
 .services {
     background-color: var(--cream);
+    text-align: center;
 }
 .services ul {
     display: grid;
@@ -213,6 +214,10 @@ nav a:hover {
     height: auto;
 }
 
+.about,
+.service-area {
+    text-align: center;
+}
 
 
 .menu-button {
@@ -234,7 +239,6 @@ nav a:hover {
 @media (max-width: 768px) {
 
     header {
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
@@ -246,7 +250,7 @@ nav a:hover {
         display: block;
     }
 
-    nav {
+    .navigation {
         display: none;
         width: 100%;
 
@@ -257,7 +261,7 @@ nav a:hover {
         padding-top: 10px;
     }
 
-    nav.active {
+    .navigation.active {
         display: flex;
     }
 
