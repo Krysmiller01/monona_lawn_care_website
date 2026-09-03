@@ -102,7 +102,7 @@ nav a:hover {
     border-bottom: 1px solid var(--dark);
 }
 .hero p {
-    max-width: 600 px;
+    max-width: 600px;
 
     margin: 0 auto 30px;
 
@@ -144,7 +144,7 @@ nav a:hover {
 .services ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25 px;
+    gap: 25px;
 
     list-style: none;
 
@@ -185,7 +185,7 @@ nav a:hover {
     background-color: var(--white);
 }
 .about p {
-    max-width: 750 px;
+    max-width: 750px;
 }
 
 
@@ -196,7 +196,8 @@ nav a:hover {
     background-color: var(--cream);
 }
 .map img {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
 }
 
@@ -214,31 +215,58 @@ nav a:hover {
 
 
 
+.menu-button {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: var(--green);
+
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+
 /*---------------------------------------------------------*/
 /* Mobile Settings */
 @media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 15px 20px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 15px;
+        padding-top: 10px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
     .services ul {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15 px;
     }
 
     .logo img {
         width: 150px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .services ul {
-        grid-template-columns: 1fr;
     }
 
     section {
